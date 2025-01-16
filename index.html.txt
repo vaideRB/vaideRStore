@@ -1,0 +1,76 @@
+<index.html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vaideR Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: #fff;
+        }
+        header {
+            background-color: #282828;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #ff5c5c;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .download-card {
+            background-color: #333;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+        }
+        .download-card h2 {
+            color: #ff5c5c;
+        }
+        .download-card p {
+            margin: 10px 0;
+        }
+        .download-card a {
+            display: inline-block;
+            background-color: #ff5c5c;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .download-card a:hover {
+            background-color: #e64e4e;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>vaideR Store</h1>
+    </header>
+    <main>
+        <section class="download-card">
+            <h2>"Evil Atlanta Beat" Sounds</h2>
+            <p>These are the sounds used in my tutorial on creating dark Atlanta beats in FL Studio.</p>
+            <a href="https://rkns.link/n9cd4" target="_blank">Download Now</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
