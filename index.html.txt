@@ -1,0 +1,121 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vaideR Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://example.com/your-profile-pic.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        header {
+            background-color: rgba(40, 40, 40, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #ff5c5c;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .download-card {
+            background-color: rgba(51, 51, 51, 0.9);
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+        }
+        .download-card h2 {
+            color: #ff5c5c;
+        }
+        .download-card p {
+            margin: 10px 0;
+        }
+        .download-card button {
+            display: inline-block;
+            background-color: #ff5c5c;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .download-card button:hover {
+            background-color: #e64e4e;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .download-card {
+                padding: 15px;
+            }
+            .download-card button {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 5px #ff5c5c;
+            }
+            50% {
+                box-shadow: 0 0 20px #ff5c5c;
+            }
+            100% {
+                box-shadow: 0 0 5px #ff5c5c;
+            }
+        }
+        .download-card button {
+            animation: glow 1.5s infinite;
+        }
+    </style>
+    <script>
+        function confirmDownload() {
+            const userConfirmed = confirm("Have you subscribed to my YouTube channel? If yes, click OK to proceed.");
+            if (userConfirmed) {
+                window.open('https://app.mediafire.com/7dkie16u4ke91', '_blank');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>vaideR Store</h1>
+    </header>
+    <main>
+        <section class="download-card">
+            <h2>Sounds From The Video</h2>
+            <p>These are the sounds used in my tutorial on creating dark Atlanta beats in FL Studio.</p>
+            <ol>
+                <li>Go to my <a href="https://www.youtube.com/@Vaiderbeats" target="_blank">YouTube channel</a> and Like & Subscribe.</li>
+                <li>Return here to download the sound pack.</li>
+            </ol>
+            <button onclick="confirmDownload()">Download Now</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Vaider Beats. All rights reserved.</p>
+        <p>Follow me: 
+            <a href="https://instagram.com/vaiderbeatz_rsa/" target="_blank">Instagram</a> | 
+            <a href="https://open.spotify.com/artist/5WwT8k4AzQMRYKZZB3iw8z?si=nCIaxkq6RdWtKqVKM35umw" target="_blank">Spotify</a>
+        </p>
+    </footer>
+</body>
+</html>
