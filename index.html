@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,12 +9,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://example.com/your-profile-pic.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #1e1e1e;
             color: #fff;
         }
         header {
-            background-color: rgba(40, 40, 40, 0.8);
+            background-color: #282828;
             padding: 20px;
             text-align: center;
         }
@@ -27,7 +26,7 @@
             text-align: center;
         }
         .download-card {
-            background-color: rgba(51, 51, 51, 0.9);
+            background-color: #333;
             margin: 20px auto;
             padding: 20px;
             border-radius: 10px;
@@ -40,18 +39,16 @@
         .download-card p {
             margin: 10px 0;
         }
-        .download-card button {
+        .download-card a {
             display: inline-block;
             background-color: #ff5c5c;
             color: #fff;
             text-decoration: none;
             padding: 10px 20px;
-            border: none;
             border-radius: 5px;
-            cursor: pointer;
             transition: background-color 0.3s;
         }
-        .download-card button:hover {
+        .download-card a:hover {
             background-color: #e64e4e;
         }
         footer {
@@ -59,38 +56,32 @@
             text-align: center;
             font-size: 14px;
         }
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-            .download-card {
-                padding: 15px;
-            }
-            .download-card button {
-                padding: 8px 15px;
-                font-size: 0.9rem;
-            }
+        .spotify-link {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #1DB954;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
-        @keyframes glow {
-            0% {
-                box-shadow: 0 0 5px #ff5c5c;
-            }
-            50% {
-                box-shadow: 0 0 20px #ff5c5c;
-            }
-            100% {
-                box-shadow: 0 0 5px #ff5c5c;
-            }
-        }
-        .download-card button {
-            animation: glow 1.5s infinite;
+        .spotify-link:hover {
+            background-color: #17a74a;
         }
     </style>
     <script>
-        function confirmDownload() {
-            const userConfirmed = confirm("Have you subscribed to my YouTube channel? If yes, click OK to proceed.");
-            if (userConfirmed) {
-                window.open('https://app.mediafire.com/7dkie16u4ke91', '_blank');
+        function redirectUser() {
+            const youtube = "https://www.youtube.com/@Vaiderbeats/";
+            const instagram = "https://www.instagram.com/vaiderbeatz_rsa/";
+            const mediafire = "https://www.mediafire.com/file/ufdg60ge82yltzt/CableGuys.HalfTime.v1.0.1.rar/file";
+            
+            // Redirect sequence
+            if (confirm("Have you subscribed to my YouTube channel?")) {
+                window.location.href = instagram;
+            } else {
+                alert("Please subscribe to continue!");
+                window.location.href = youtube;
             }
         }
     </script>
@@ -101,21 +92,15 @@
     </header>
     <main>
         <section class="download-card">
-            <h2>Sounds From The Video</h2>
-            <p>These are the sounds used in my tutorials in FL Studio.</p>
-            <ol>
-                <li>Go to my <a href="https://www.youtube.com/@Vaiderbeats" target="_blank">YouTube channel</a> and Like & Subscribe.</li>
-                <li>Return here to download the sound pack.</li>
-            </ol>
-            <button onclick="confirmDownload()">Download Now</button>
+            <h2>"Plugins & Packs From My Tutorials" Sounds</h2>
+            <p>These are the sounds and packs used on my tutorials in FL Studio.</p>
+            <a href="#" onclick="redirectUser()">Download Now</a>
         </section>
+        <a href="https://open.spotify.com/artist/5WwT8k4AzQMRYKZZB3iw8z?si=OgK0ReggRRuwHS11Vx5dUA" 
+           target="_blank" class="spotify-link">Follow me on Spotify</a>
     </main>
     <footer>
-        <p>&copy; 2025 Vaider Beats. All rights reserved.</p>
-        <p>Follow me: 
-            <a href="https://instagram.com/vaiderbeatz_rsa/" target="_blank">Instagram</a> | 
-            <a href="https://open.spotify.com/artist/5WwT8k4AzQMRYKZZB3iw8z?si=nCIaxkq6RdWtKqVKM35umw" target="_blank">Spotify</a>
-        </p>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
     </footer>
 </body>
 </html>
