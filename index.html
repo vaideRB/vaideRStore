@@ -99,16 +99,20 @@
         footer a:hover {
             text-decoration: underline;
         }
-        .character {
-            width: 100px;
-            animation: float 3s ease-in-out infinite;
+        footer .spotify-icon {
+            width: 20px;
+            margin-left: 5px;
+            animation: fade 3s infinite;
         }
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
+        @keyframes fade {
+            0% {
+                opacity: 1;
             }
             50% {
-                transform: translateY(-20px);
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
             }
         }
         @media (max-width: 600px) {
@@ -127,20 +131,12 @@
     <script>
         function confirmDownload() {
             const youtubeUrl = "https://www.youtube.com/@Vaiderbeats";
-            const instagramUrl = "https://instagram.com/vaiderbeatz_rsa/";
             const downloadUrl = "https://app.mediafire.com/7dkie16u4ke91";
 
-            // Confirm YouTube subscription
+            // Redirect to YouTube
             const subscribed = confirm("Have you subscribed to my YouTube channel?");
             if (subscribed) {
-                // Confirm Instagram follow
-                const followed = confirm("Have you followed me on Instagram?");
-                if (followed) {
-                    window.open(downloadUrl, "_blank");
-                } else {
-                    alert("Please follow me on Instagram to proceed.");
-                    window.location.href = instagramUrl;
-                }
+                window.open(downloadUrl, "_blank");
             } else {
                 alert("Please subscribe to my YouTube channel to proceed.");
                 window.location.href = youtubeUrl;
@@ -156,23 +152,20 @@
         <section class="download-card">
             <h2>Exclusive Sound Pack</h2>
             <p>Get the sounds from my tutorials. Follow the steps below to download:</p>
-            <ul>
+            <ol>
                 <li>Subscribe to my <a href="https://www.youtube.com/@Vaiderbeats" target="_blank">YouTube channel</a>.</li>
-                <li>Follow me on <a href="https://instagram.com/vaiderbeatz_rsa/" target="_blank">Instagram</a>.</li>
                 <li>Return here to download the sound pack.</li>
-            </ul>
+            </ol>
             <button onclick="confirmDownload()">Download Now</button>
         </section>
-        <div>
-            <img src="https://example.com/animated-character1.gif" alt="Character 1" class="character">
-            <img src="https://example.com/animated-character2.gif" alt="Character 2" class="character">
-        </div>
     </main>
     <footer>
         <p>&copy; 2025 Vaider Beats. All rights reserved.</p>
         <p>Follow me: 
-            <a href="https://instagram.com/vaiderbeatz_rsa/" target="_blank">Instagram</a> | 
-            <a href="https://open.spotify.com/artist/5WwT8k4AzQMRYKZZB3iw8z?si=nCIaxkq6RdWtKqVKM35umw" target="_blank">Spotify</a>
+            <a href="https://open.spotify.com/artist/5WwT8k4AzQMRYKZZB3iw8z?si=nCIaxkq6RdWtKqVKM35umw" target="_blank">
+                Spotify
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Icon" class="spotify-icon">
+            </a>
         </p>
     </footer>
 </body>
