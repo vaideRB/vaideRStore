@@ -102,7 +102,7 @@
     <main>
         <section class="download-card">
             <h2>Sounds From The Video</h2>
-            <p>These are the sounds used in my tutorial on creating dark Atlanta beats in FL Studio.</p>
+            <p>These are the sounds used in my tutorials in FL Studio.</p>
             <ol>
                 <li>Go to my <a href="https://www.youtube.com/@Vaiderbeats" target="_blank">YouTube channel</a> and Like & Subscribe.</li>
                 <li>Return here to download the sound pack.</li>
