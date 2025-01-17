@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://drive.google.com/file/d/1qRLP5FZ3BvQdQSxmvnISPzPWdJsSp3uk/view?usp=drive_link') no-repeat center center fixed;
+            background: url('https://example.com/your-profile-pic.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
         }
@@ -18,21 +18,12 @@
             padding: 20px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(255, 0, 0, 0.7);
-            animation: slideIn 2s ease-out;
         }
         header h1 {
             margin: 0;
             color: #ff5c5c;
             font-size: 3rem;
             text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-        }
-        @keyframes slideIn {
-            0% {
-                transform: translateY(-100%);
-            }
-            100% {
-                transform: translateY(0);
-            }
         }
         main {
             padding: 40px;
@@ -107,6 +98,8 @@
         }
     </style>
     <script>
+        let downloadLink = "https://drive.google.com/file/d/1tkE0MqEwPIg-qiOnmmJtbda--A8C2NvA/view?usp=drive_link"; // Replace this link whenever needed
+
         function checkSubscription() {
             const youtubeUrl = "https://www.youtube.com/@Vaiderbeats";
             const subscribed = confirm("Have you subscribed to my YouTube channel?");
@@ -115,8 +108,7 @@
                 document.getElementById("downloadBtn").classList.add("active");
                 document.getElementById("downloadBtn").disabled = false;
                 document.getElementById("downloadBtn").onclick = function() {
-                    // Replace YOUR_FILE_ID with your Google Drive file ID
-                    window.open("https://drive.google.com/file/d/1qRLP5FZ3BvQdQSxmvnISPzPWdJsSp3uk/view?usp=drive_link", "_blank");
+                    window.open(downloadLink, "_blank");
                 };
             } else {
                 alert("Please subscribe to my YouTube channel to proceed.");
