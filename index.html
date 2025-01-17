@@ -115,7 +115,8 @@
                 document.getElementById("downloadBtn").classList.add("active");
                 document.getElementById("downloadBtn").disabled = false;
                 document.getElementById("downloadBtn").onclick = function() {
-                    window.open("https://app.mediafire.com/7dkie16u4ke91", "_blank");
+                    // Replace YOUR_FILE_ID with your Google Drive file ID
+                    window.open("https://drive.google.com/uc?export=download&id=YOUR_FILE_ID", "_blank");
                 };
             } else {
                 alert("Please subscribe to my YouTube channel to proceed.");
